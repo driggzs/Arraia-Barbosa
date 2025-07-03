@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colégio Barbosa Ferraz - Ivaiporã</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -20,16 +21,16 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         
         .container {
             max-width: 800px;
             width: 100%;
-            background: white;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
             color: #333;
         }
@@ -39,149 +40,259 @@
             background: linear-gradient(to right, #1a2a6c, #2a5298);
         }
         
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto;
+        .logo-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px;
             background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 4px solid #ffd700;
-            font-weight: bold;
-            font-size: 18px;
-            color: #2a5298;
+            border: 5px solid #ffd700;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         h1 {
-            margin-top: 15px;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .subtitle {
             color: #ffd700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-top: 5px;
         }
         
         .school-image {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .school-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .event-section {
-            padding: 20px;
+            padding: 30px 20px;
+            background: linear-gradient(45deg, #ff6f00, #ffca28);
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .event-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.2"/><circle cx="50" cy="50" r="3" fill="white" opacity="0.2"/><circle cx="80" cy="80" r="2" fill="white" opacity="0.2"/></svg>');
+            background-size: 100px;
+            opacity: 0.3;
+            z-index: 0;
         }
         
         .event-title {
             font-size: 1.8rem;
-            color: #1a2a6c;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
         }
         
         .event-highlight {
-            font-size: 2.2rem;
-            color: #ff6f00;
-            margin-bottom: 15px;
+            font-size: 3.5rem;
             font-weight: bold;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            color: #1a2a6c;
         }
         
         .event-description {
             font-size: 1.1rem;
-            color: #333;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .event-button {
             display: inline-block;
-            background: linear-gradient(to right, #ff6f00, #ffca28);
+            background: #1a2a6c;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            padding: 12px 35px;
+            padding: 15px 40px;
             border-radius: 50px;
-            margin: 15px 0;
+            margin: 10px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(255, 111, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
         }
         
         .event-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(255, 111, 0, 0.6);
+            background: #2a5298;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .event-button i {
+            margin-left: 8px;
         }
         
         .description {
-            padding: 20px;
+            padding: 30px;
             text-align: center;
-            color: #333;
-            background: #f8f9fa;
         }
         
         .description h2 {
             color: #1a2a6c;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+        }
+        
+        .description h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #ffd700;
         }
         
         .description p {
-            margin-bottom: 15px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         footer {
             background: #1a2a6c;
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: auto;
+            padding: 20px;
             width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
             max-width: 800px;
-            border-radius: 0 0 10px 10px;
         }
         
         .contact {
-            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .event-highlight {
+                font-size: 2.5rem;
+            }
+            
+            .logo-container {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .school-image {
+                height: 250px;
+            }
+            
+            .event-button {
+                padding: 12px 30px;
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Logo.png</div>
+            <div class="logo-container">
+                <img src="Logo.png alt="Logo do Colégio">
+            </div>
             <h1>Colégio Barbosa Ferraz</h1>
             <div class="subtitle">Ivaiporã - Paraná</div>
         </div>
         
-        <div class="school-image">ESCOLA.PNG</div>
+        <div class="school-image">
+            <img src="https://parana-centro.nyc3.cdn.digitaloceanspaces.com/articles/1200x560/image_6369391d8c9543.52395268.webp" alt="Foto do Colégio">
+        </div>
         
         <div class="event-section">
             <div class="event-title">Próximo Evento</div>
             <div class="event-highlight">20° Arraia do Barbosa</div>
-            <div class="event-description">Celebrando 20 anos de tradição e comunidade!</div>
-            <a href="#" class="event-button">Venha para o arraia!</a>
+            <div class="event-description">Celebrando 20 anos de tradição, cultura e comunidade!</div>
+            <button class="event-button">Venha para o arraia! <i class="fas fa-arrow-right"></i></button>
         </div>
         
         <div class="description">
-            <h2>Sobre o Colégio</h2>
-            <p>O Colégio Estadual Barbosa Ferraz, localizado em Ivaiporã, Paraná, é uma instituição de ensino com mais de 50 anos de história, dedicada à formação integral de seus estudantes.</p>
-            <p>Fundado em 1968, o colégio oferece ensino fundamental e médio de qualidade, com foco no desenvolvimento acadêmico, humano e social dos alunos.</p>
+            <h2>Sobre o Colégio Barbosa Ferraz</h2>
+            <p>Fundado em 1968, o Colégio Estadual Barbosa Ferraz é uma instituição de ensino que há mais de 50 anos forma cidadãos e contribui para o desenvolvimento educacional da região de Ivaiporã, Paraná.</p>
+            
+            <p>Oferecemos ensino fundamental e médio de qualidade, com uma proposta pedagógica que valoriza o conhecimento científico, a formação humana e o desenvolvimento de competências para a vida. Nossa missão é proporcionar uma educação transformadora, baseada em valores éticos e humanos.</p>
+            
+            <p>O Colégio Barbosa Ferraz se destaca por seu ambiente acolhedor e atividades extracurriculares diversificadas, incluindo projetos de iniciação científica, esportes, artes e ações de voluntariado.</p>
         </div>
     </div>
     
     <footer>
-        <p>Colégio Estadual Barbosa Ferraz</p>
-        <div class="contact">Rua Paraná, 1234 - Ivaiporã, PR | (43) 3472-1234</div>
+        <p>Colégio Estadual Barbosa Ferraz - Ivaiporã/PR</p>
+        <div class="contact">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Rua Paraná, 1234 - Centro</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(43) 3472-1234</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>contato@barbosaferraz.edu.br</span>
+            </div>
+        </div>
+        <p style="margin-top: 15px;">&copy; 2023 - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
