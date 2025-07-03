@@ -75,19 +75,22 @@
             margin-bottom: 15px;
         }
         
-        .event-image {
+        .video-container {
+            position: relative;
             width: 100%;
-            height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            margin: 20px 0;
         }
         
-        .event-image img {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
         .event-info {
@@ -150,13 +153,12 @@
             margin: 20px 0;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: none;
-            cursor: pointer;
         }
         
         .back-button:hover {
             background: #2a5298;
             transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
         
         footer {
@@ -184,23 +186,39 @@
             gap: 10px;
         }
         
+        .video-note {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin: 10px 0 20px;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 600px) {
             .event-main-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .event-date {
+                font-size: 1.2rem;
             }
             
             .event-logo {
-                width: 130px;
-                height: 130px;
-            }
-            
-            .event-image {
-                height: 250px;
+                width: 100px;
+                height: 100px;
             }
             
             .back-button {
-                padding: 12px 30px;
-                font-size: 1.2rem;
+                padding: 10px 25px;
+                font-size: 1.1rem;
+            }
+            
+            .info-title {
+                font-size: 1.5rem;
+            }
+            
+            .info-item h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -215,9 +233,15 @@
             <div class="event-date">8 de Julho | Começa às 18h</div>
         </div>
         
-        <div class="event-image">
-            <img src="https://atunorpi.com.br/wp-content/uploads/2025/06/Arraia-do-Barbosa-Ferraz.png" alt="Festa Junina">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/_iwANg4M8GU" 
+                title="musica" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
+        <div class="video-note">Musica Tipica</div>
         
         <div class="event-info">
             <h2 class="info-title">Informações do Evento</h2>
@@ -229,12 +253,12 @@
             
             <div class="info-item">
                 <h3><i class="fas fa-utensils"></i> Comidas Típicas</h3>
-                <p>Teremos uma grande variedade de comidas típicas juninas, incluindo cachorro-quente, pipoca, pé de moleque, maçã do amor e muito mais! Tudo preparado com carinho pela comunidade escolar.</p>
+                <p>Teremos uma grande variedade de comidas típicas juninas, incluindo cachorro-quente, pipoca, pamonha, curau, pé de moleque, maçã do amor, bolos caseiros e muito mais! Tudo preparado com carinho pela comunidade escolar.</p>
             </div>
             
             <div class="info-item">
                 <h3><i class="fas fa-music"></i> Apresentações Culturais</h3>
-                <p>Nossa festa contará com diversas apresentações culturais, incluindo quadrilha junina com alunos, danças e apresentação da escola. Um espetáculo para toda a família!</p>
+                <p>Nossa festa contará com diversas apresentações culturais, incluindo quadrilha junina com alunos, danças folclóricas, coral da escola e apresentação de bandas locais. Um espetáculo para toda a família!</p>
             </div>
             
             <div class="info-item">
