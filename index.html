@@ -3,57 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descrição do site">
-    <meta name="keywords" content="palavras-chave, para, SEO">
-    <meta name="author" content="Seu Nome">
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Apresentação</title>
-    
-    <!-- Pré-conexão para recursos externos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <title>Colégio Barbosa Ferraz - Ivaiporã</title>
     <style>
-        /* Estilos iniciais básicos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #1a2a6c, #2a5298);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
             color: #333;
-            background-color: #f4f4f4;
+        }
+        
+        .header {
+            padding: 30px 20px;
+            background: linear-gradient(to right, #1a2a6c, #2a5298);
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #ffd700;
+            font-weight: bold;
+            font-size: 18px;
+            color: #2a5298;
+        }
+        
+        h1 {
+            margin-top: 15px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .subtitle {
+            color: #ffd700;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .school-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .event-section {
+            padding: 20px;
+        }
+        
+        .event-title {
+            font-size: 1.8rem;
+            color: #1a2a6c;
+            margin-bottom: 10px;
+        }
+        
+        .event-highlight {
+            font-size: 2.2rem;
+            color: #ff6f00;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .event-description {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .event-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff6f00, #ffca28);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 35px;
+            border-radius: 50px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 111, 0, 0.4);
+        }
+        
+        .event-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 111, 0, 0.6);
+        }
+        
+        .description {
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .description h2 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .description p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: #1a2a6c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .contact {
+            font-size: 0.9rem;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Conteúdo principal da página -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h1>Apresentação</h1>
-            <p>Texto introdutório...</p>
-        </section>
-
-        <article>
-            <h2>Subtítulo</h2>
-            <p>Conteúdo da seção...</p>
-        </article>
-    </main>
-
+    <div class="container">
+        <div class="header">
+            <div class="logo">LOGO.PNG</div>
+            <h1>Colégio Barbosa Ferraz</h1>
+            <div class="subtitle">Ivaiporã - Paraná</div>
+        </div>
+        
+        <div class="school-image">ESCOLA.PNG</div>
+        
+        <div class="event-section">
+            <div class="event-title">Próximo Evento</div>
+            <div class="event-highlight">20° Arraia do Barbosa</div>
+            <div class="event-description">Celebrando 20 anos de tradição e comunidade!</div>
+            <a href="#" class="event-button">Venha para o arraia!</a>
+        </div>
+        
+        <div class="description">
+            <h2>Sobre o Colégio</h2>
+            <p>O Colégio Estadual Barbosa Ferraz, localizado em Ivaiporã, Paraná, é uma instituição de ensino com mais de 50 anos de história, dedicada à formação integral de seus estudantes.</p>
+            <p>Fundado em 1968, o colégio oferece ensino fundamental e médio de qualidade, com foco no desenvolvimento acadêmico, humano e social dos alunos.</p>
+        </div>
+    </div>
+    
     <footer>
-        <p>&copy; 2023 Todos os direitos reservados</p>
+        <p>Colégio Estadual Barbosa Ferraz</p>
+        <div class="contact">Rua Paraná, 1234 - Ivaiporã, PR | (43) 3472-1234</div>
     </footer>
+</body>
+</html>
