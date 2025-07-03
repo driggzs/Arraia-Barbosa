@@ -1,1 +1,269 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20° Arraia do Barbosa - Colégio Barbosa Ferraz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a5298);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #333;
+        }
+        
+        .event-header {
+            padding: 30px 20px;
+            background: linear-gradient(to right, #ff6f00, #ffca28);
+            text-align: center;
+        }
+        
+        .event-logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid #1a2a6c;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .event-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .event-main-title {
+            font-size: 3rem;
+            color: #1a2a6c;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        
+        .event-date {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .event-info {
+            padding: 30px;
+            text-align: left;
+            background: white;
+        }
+        
+        .info-title {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            text-align: center;
+        }
+        
+        .info-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #ffd700;
+        }
+        
+        .info-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-item h3 {
+            color: #ff6f00;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #1a2a6c;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .back-button:hover {
+            background: #2a5298;
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: #1a2a6c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .event-main-title {
+                font-size: 2.5rem;
+            }
+            
+            .event-logo {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .event-image {
+                height: 250px;
+            }
+            
+            .back-button {
+                padding: 12px 30px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="event-header">
+            <div class="event-logo">
+                <img src="Logo.png" alt="Logo do Arraia">
+            </div>
+            <div class="event-main-title">20° Arraia do Barbosa</div>
+            <div class="event-date">8 de Julho | Começa às 18h</div>
+        </div>
+        
+        <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Festa Junina">
+        </div>
+        
+        <div class="event-info">
+            <h2 class="info-title">Informações do Evento</h2>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-calendar-alt"></i> Data e Horário</h3>
+                <p>O 20° Arraia do Barbosa acontecerá no dia 8 de julho, começando às 18 horas e estendendo-se até às 23 horas. Chegue cedo para garantir os melhores lugares!</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-utensils"></i> Comidas Típicas</h3>
+                <p>Teremos uma grande variedade de comidas típicas juninas, incluindo cachorro-quente, pipoca, pamonha, curau, pé de moleque, maçã do amor, bolos caseiros e muito mais! Tudo preparado com carinho pela comunidade escolar.</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-music"></i> Apresentações Culturais</h3>
+                <p>Nossa festa contará com diversas apresentações culturais, incluindo quadrilha junina com alunos, danças folclóricas, coral da escola e apresentação de bandas locais. Um espetáculo para toda a família!</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-star"></i> Baladinha Junina</h3>
+                <p>A partir das 21h, teremos nossa tradicional "Baladinha Junina" com DJ contratado tocando os maiores sucessos. Entrada: R$ 10,00 com toda renda revertida para futuros investimentos na escola e formatura dos 3° anos.</p>
+            </div>
+            
+            <div class="info-item">
+                <h3><i class="fas fa-hand-holding-heart"></i> Objetivo do Evento</h3>
+                <p>Toda a renda arrecadada será destinada para melhorias na infraestrutura da escola, aquisição de novos materiais pedagógicos e para ajudar na formatura dos alunos do 3° ano. Sua participação é fundamental para apoiar nossa escola!</p>
+            </div>
+            
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar para a página inicial</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>20° Arraia do Barbosa - Colégio Estadual Barbosa Ferraz</p>
+        <div class="contact">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Rua Paraná, 1234 - Centro - Ivaiporã/PR</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>(43) 3472-1234</span>
+            </div>
+        </div>
+        <p style="margin-top: 15px;">&copy; 2023 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
